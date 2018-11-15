@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>FREECODECAMP exercise: Build a Survey Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="apple-touch-icon-precomposed" href="media/favicon.png">
+  <link rel="shortcut icon" href="media/favicon.png" type="image/png">
+</head>
+
+<body>
+
+  <div id="wrapper">
+
+    <header id="header">
+      <div id="logo">
+        <a href="https://www.freecodecamp.com/mickelmetekohy" title="FreeCodeCamp Mickel Metekohy" target="_blank">
+          <img src="media/freecodecamp_logo.svg" alt="free code camp logo" height="40">
+        </a>
+      </div>
+      <h1 id="title">Survey Form</h1>
+    </header>
+
+    <main>
+      <p id="description">How do you like your coffee?</p>
+
+      <form id="survey-form" method="POST">
+
+        <div class="form-row">
+          <div class="q">
+            <label id="cups-label" for="cups">How many cups do you drink in a day?</label>
+          </div>
+          <div class="a">
+            <input type="number" id="cups" name="cups" min="0" max="15" step="1" placeholder="(max 15)">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="q">
+            <label id="dropdown-label" for="dropdown">What is your favorite roast?</label>
+          </div>
+          <div class="a">
+            <select name="roast" id="dropdown">
+              <option value="">--Please choose an option--</option>
+              <option value="light">Light</option>
+              <option value="medium">Medium</option>
+              <option value="dark" default>Dark</option>
+            </select>
+          </div>
+        </div>
+
+        <div role="group" class="form-row">
+          <div class="q">
+            <legend>In which ways do you brew your coffee?</legend>
+          </div>
+          <div class="a">
+            <input type="checkbox" id="mokkapot" name="style" value="mokkapot">
+            <label id="mokkapot-label" for="mokkapot">Mokkapot</label>
+
+            <input type="checkbox" id="drip-coffee" name="style" value="drip-coffee">
+            <label id="drip-coffee-label" for="drip-coffee">Drip Coffee</label>
+
+            <input type="checkbox" id="frenchpress" name="style" value="frenchpress">
+            <label id="frenchpress-label" for="frenchpress">Frenchpress</label>
+
+            <input type="checkbox" id="v60" name="style" value="v60">
+            <label id="v60-label" for="v60">v60</label>
+
+            <input type="checkbox" id="aeropress" name="style" value="aeropress">
+            <label id="aeropress-label" for="aeropress">Aeropress</label>
+
+            <input type="checkbox" id="nespresso" name="style" value="nespresso">
+            <label id="nespresso-label" for="nespresso">Nespresso</label>
+          </div>
+        </div>
+
+        <div role="group" class="form-row">
+          <div class="q">
+            <legend>What is your favorite place to drink coffee?</legend>
+          </div>
+          <div class="a">
+            <input type="radio" id="coffee-shop" name="place" value="coffee-shop">
+            <label id="coffee-shop-label" for="coffee-shop">Coffee shop</label>
+
+            <input type="radio" id="at-home" name="place" value="at-home">
+            <label id="at-home-label" for="at-home">At home</label>
+
+            <input type="radio" id="at-work" name="place" value="at-work">
+            <label id="at-work-label" for="at-work">At work</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="q">
+            <label id="recipe-label" for="recipe">What is your favorite coffee recipe?</label>
+          </div>
+          <div class="a">
+            <textarea name="recipe" id="recipe" rows="5" maxlength="500" placeholder="(max 500 characters)"></textarea>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="q">
+            <label id="name-label" for="name">Name:</label>
+          </div>
+          <div class="a">
+            <input type="text" id="name" name="name" placeholder="Name" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="q">
+            <label id="email-label" for="email">Email:</label>
+          </div>
+          <div class="a">
+            <input type="email" id="email" name="email" placeholder="Email" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="q">
+            <label id="number-label" for="number">Age:</label>
+          </div>
+          <div class="a">
+            <input type="number" id="number" name="number" placeholder="Age" min="0" max="150">
+          </div>
+        </div>
+
+        <button type="submit" id="submit">Submit</button>
+
+      </form>
+    </main>
+
+    <footer>
+      <div class="info-btn-container single-btn">
+        <label class="info btn"><input type="checkbox" name="info" value="info">
+          <div id="info">
+            <div class="inner-info">
+              <div class="social">
+                <a href="https://twitter.com/mickelmetekohy" target="_blank" class="tweet btn"><span class="sr-only">Twitter</span></a>
+                <a href="https://github.com/MickelMetekohy" target="_blank" class="github btn"><span class="sr-only">Github</span></a>
+                <a href="https://www.linkedin.com/in/mickel-metekohy-31105865" target="_blank" class="linkedin btn"><span
+                    class="sr-only">LinkedIn Quote</span></a>
+                <span class="exit btn"><span class="sr-only">Exit Info</span></span>
+              </div>
+              <div class="copy">
+                <p>#FreeCodeCamp Exersize:<br>Use the Twitchtv JSON API.</p>
+              </div>
+              <div class="fcc">
+                <a href="https://www.freecodecamp.com/mickelmetekohy" title="FreeCodeCamp Mickel Metekohy" target="_blank">
+                  <img src="media/freecodecamp_logo.svg" alt="free code camp logo" height="40">
+                </a>
+              </div>
+            </div>
+          </div>
+        </label>
+      </div>
+    </footer>
+
+  </div>
+  <!-- end #wrapper -->
+
+  <script src="js/index.js"></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
